@@ -12,7 +12,7 @@ const albumSchema = new Schema({
   numberOfPhotos: { type: Number, default: 0 },
   dateCreated: { type: Date, default: Date.now() },
   dateModified: { type: Date, default: Date.now() },
-  hidden: Boolean,
+  hidden: { type: Boolean, default: false },
   meta: {
     tags: String,
   },

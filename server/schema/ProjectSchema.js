@@ -9,7 +9,7 @@ const projectSchema = new Schema({
   topic: { type: String },
   dateCreated: { type: Date, default: Date.now() },
   dateModified: { type: Date, default: Date.now() },
-  hidden: Boolean,
+  hidden: { type: Boolean, default: false },
   meta: {
     tags: String,
   },

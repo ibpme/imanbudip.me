@@ -13,7 +13,7 @@ const imageSchema = new Schema({
     id: String,
     url: String,
   },
-  hidden: Boolean,
+  hidden: { type: Boolean, default: false },
   meta: {
     tags: String,
   },

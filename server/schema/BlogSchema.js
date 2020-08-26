@@ -9,7 +9,7 @@ const blogSchema = new Schema({
   dateCreated: { type: Date, default: Date.now() },
   dateModified: { type: Date, default: Date.now() },
   postedFrom: { type: String, required: true },
-  hidden: Boolean,
+  hidden: { type: Boolean, default: false },
   meta: {
     tags: String,
   },
