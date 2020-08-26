@@ -5,8 +5,9 @@ const projectSchema = new Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
   body: { url: { type: String }, repo: { type: String } },
-  image: { type: Image },
+  image: { type: Buffer },
   topic: { type: String },
+  stack: [String],
   dateCreated: { type: Date, default: Date.now() },
   dateModified: { type: Date, default: Date.now() },
   hidden: { type: Boolean, default: false },
@@ -15,4 +16,4 @@ const projectSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("Image", imageSchema);
+module.exports = mongoose.model("Projects", projectSchema);
