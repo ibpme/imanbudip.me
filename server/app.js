@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 
-const blogRouter = require("./routes/blogs");
+const blogsRoute = require("./routes/blogs");
+const imagesRoute = require("./routes/images");
 
 const mongoose = require("mongoose");
 const databaseUrl = "mongodb://localhost:27017/website";
@@ -22,24 +23,27 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 //TODO: Add authentication
-app.use("/blogs", blogRouter);
+app.use("/blogs", blogsRoute);
+// app.use("/image", imagesRoute);
 
 app.use((err, req, res, next) => {
   //Client Side Error
   console.log(err.name);
   if (
-    ["VallidationError", "CastError", "DocumentNotFoundError"].includes(
+    ["ValidationError", "CastError", " DocumentNotFoundError"].includes(
       err.name
     )
   ) {
-    //Make each error a unique message
+    //TODO : Make each error a unique message
     res.status(400).json({ name: err.name, message: err.message });
-  } else {
-    next(err);
   }
+  if (err.message === "NotFound")
+    res.status(404).json({ name: err.name, message: err.message });
+
+  next(err);
 });
 
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   //Server Side Error
   console.log({ stack: err.stack, name: err.name });
   res.status(500);
