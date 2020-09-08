@@ -13,9 +13,6 @@ const albumSchema = new Schema({
   dateCreated: { type: Date, default: Date.now() },
   dateModified: { type: Date, default: Date.now() },
   hidden: { type: Boolean, default: false },
-  meta: {
-    tags: String,
-  },
 });
 
 module.exports = mongoose.model("Albums", albumSchema);
