@@ -1,0 +1,38 @@
+:root {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* 
+TODO: - Create a neater font sizing for each element 
+TODO: - Make tinier fonts, - Animate pictures
+ */
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  background-color: #0b0b0b;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+body::-webkit-scrollbar-track {
+  background: #232c35;
+}
+body::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: #fff;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}

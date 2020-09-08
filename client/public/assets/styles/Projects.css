@@ -1,0 +1,48 @@
+.Projects {
+  min-height: 100vh;
+}
+
+.Projects h2 {
+  margin-left: 6rem;
+  font-size: 2rem;
+}
+
+th,
+tr,
+ul {
+  color: #fff;
+}
+
+th {
+  font-size: 1.5rem;
+}
+tr {
+  font-weight: 400;
+}
+
+.ProjectsTable {
+  margin: 5rem;
+  width: 80%;
+  border-spacing: 0px;
+}
+
+.ProjectsTable th,
+td {
+  border-collapse: collapse;
+  padding: 1rem;
+}
+.ProjectsTable th {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.ProjectsTable tr > td {
+  border-bottom: 0.5px solid #fff;
+}
+.FutureLearn {
+  margin: 5rem;
+}
+
+.FutureLearn li {
+  font-size: 1rem;
+  font-weight: 400;
+}

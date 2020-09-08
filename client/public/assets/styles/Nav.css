@@ -1,0 +1,44 @@
+.Nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.Nav div {
+  margin: auto;
+}
+.Nav div h2 {
+  display: none;
+  color: #000;
+}
+.Nav.scrolled div h2 {
+  display: block;
+  color: #000;
+}
+
+.Nav.scrolled {
+  background-color: #fff;
+  transition: 1s;
+}
+.Nav.scrolled a {
+  color: #000;
+  padding-top: 0rem;
+  transition: 1s;
+}
+
+.Nav nav {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 90vw;
+  min-height: 10vh;
+  transition: 1s;
+}
+
+.Nav nav a {
+  padding-top: 1rem;
+  margin: 1rem 4rem;
+  font-weight: 500;
+  font-size: 2rem;
+  transition: 1s;
+}

@@ -1,0 +1,46 @@
+.Home {
+  min-height: 90vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Title {
+  align-self: center;
+}
+
+/* TypeWriter Effect */
+.Title p {
+  font-size: 3.5rem;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.2rem solid #fff; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15rem; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effectstep-end */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+.Potrait {
+  align-self: center;
+}

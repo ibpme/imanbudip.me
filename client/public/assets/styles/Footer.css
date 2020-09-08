@@ -1,0 +1,22 @@
+.Social {
+  background-color: #353535;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Social p {
+  margin: auto;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.Social div {
+  margin: auto;
+}
+
+.Social img {
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem;
+}
