@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const Blogs = require("../schema/BlogSchema");
 
+//? Create a new Error type
+
 router.get("/", async (req, res, next) => {
   try {
     const allBlogs = await Blogs.find();
@@ -31,12 +33,11 @@ router.post("/create", async (req, res, next) => {
   }
 });
 
-//Idea is to make take the id out of the admin page to edit
 router.put("/update", async (req, res, next) => {
   try {
     req.body.dateModified = Date.now();
     const updateBlog = await Blogs.findByIdAndUpdate(req.body._id, req.body);
-    console.log();
+    console.log(updateBlog);
     if (updateBlog) res.status(201).send("Updated !");
     else throw new Error("NotFound");
   } catch (error) {
