@@ -6,7 +6,8 @@ const blogsRoute = require("./routes/blogs");
 const imagesRoute = require("./routes/images");
 
 const mongoose = require("mongoose");
-const databaseUrl = "mongodb://localhost:27017/website";
+const databaseUrl =
+  process.env.MONGO_URL || "mongodb://localhost:27017/website";
 mongoose.connect(databaseUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
